@@ -1,11 +1,11 @@
-import { LuAlbum, LuCircleDot, LuDisc, LuDisc2, LuFilm } from "react-icons/lu";
+import { LuAlbum, LuCircleDot, LuClapperboard, LuDisc, LuDisc2, LuFilm } from "react-icons/lu";
 import { SchemaTypeDefinition } from "sanity";
 
 export default {
     name: 'video',
     type: 'document',
     title: 'Video',
-    icon: LuFilm,
+    icon: LuClapperboard,
     fields: [
       {
         name: 'title',

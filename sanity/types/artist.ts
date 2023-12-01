@@ -1,12 +1,12 @@
 
-import { LuUser } from "react-icons/lu";
+import { LuMic, LuMic2, LuUser, LuUsers } from "react-icons/lu";
 import { SchemaTypeDefinition } from "sanity";
 
 export default {
     name: 'artist',
     type: 'document',
     title: 'Artist',
-    icon: LuUser,
+    icon: LuUsers,
     fields: [
       {
         name: 'image',
@@ -17,7 +17,16 @@ export default {
         name: 'title',
         type: 'string',
         title: 'Title',
-        value: Math.random()
+      },
+      {
+        name: 'bio',
+        type: 'text',
+        title: 'bio',
+      },
+      {
+        name: 'birthdate',
+        type: 'date',
+        title: 'Birth Date',
       }
     ]
   } as SchemaTypeDefinition

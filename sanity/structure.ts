@@ -12,7 +12,9 @@ export const structure: StructureResolver = (S: StructureBuilder) => {
     .items([
       ...S.documentTypeListItems().filter(
         (type) =>
-          !["settings", "artist", "genre", "ads", "layout"].includes(type.getId() as string)
+          !["settings", "artist", "genre", "ads", "layout"].includes(
+            type.getId() as string
+          )
       ),
       S.divider(),
       S.documentTypeListItem("artist"),
