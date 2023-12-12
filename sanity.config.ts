@@ -10,13 +10,15 @@ import { StructureResolver, deskTool } from "sanity/desk";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema } from "./sanity/schema";
 
-import { theme } from "./sanity/theme2";
+import { theme } from "./sanity/theme/theme1";
 import { structure } from "./sanity/structure";
+import { LuAccessibility } from "react-icons/lu";
 
-export default defineConfig({
-  basePath: "/studio",
-  title: "Radio Zirak • Studio",
-  subtitle: "yes",
+export const workspace1Config =  defineConfig({
+  name: 'studio',
+  basePath: "/studio/cms",
+  title: "Radio Zirak • CMS",
+  icon: LuAccessibility,
   projectId,
   dataset,
   theme,
@@ -25,8 +27,6 @@ export default defineConfig({
     deskTool({
       structure: structure as StructureResolver,
     }),
-    // Vision is a tool that lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
   ],
 });

@@ -7,6 +7,7 @@ export default {
     type: 'document',
     title: 'Layout',
     icon: LuLayoutDashboard,
+    description: 'YES',
     fields: [
       {
         name: 'title',

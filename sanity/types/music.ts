@@ -1,5 +1,6 @@
 import { SchemaTypeDefinition } from "sanity";
 import { LuMusic } from "react-icons/lu";
+import ListPicker from "../components/ListPicker";
 
 export default {
   name: "music",
@@ -12,6 +13,9 @@ export default {
       type: "string",
       title: "Title",
       default_value: Math.random(),
+      components: {
+        input: ListPicker
+      }
     },
   ],
 } as SchemaTypeDefinition;

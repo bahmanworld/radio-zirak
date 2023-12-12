@@ -1,14 +1,20 @@
+import { Text } from "@sanity/ui";
 import { LuSettings } from "react-icons/lu";
 import {
   StructureBuilder,
   StructureContext,
   StructureResolver,
+  StructureResolverContext,
 } from "sanity/desk";
 
-export const structure: StructureResolver = (S: StructureBuilder) => {
+export const structure: StructureResolver = (S: StructureBuilder, context: StructureResolverContext) => {
+
+  const types = context.schema.getTypeNames()
+  console.log('types:', types)
+
   return S.list()
     .id("cms")
-    .title("Content Managment • CMS")
+    .title("CMS • Collections")
     .items([
       ...S.documentTypeListItems().filter(
         (type) =>
