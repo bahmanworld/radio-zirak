@@ -4,15 +4,8 @@ import React from "react";
 import { PuffLoader } from "react-spinners";
 
 export default function Home() {
-
-
-  React.useEffect(() => {}, []);
-
-
-  const audio = new HTMLMediaElement()
-
-  audio.
   
+  React.useEffect(() => {}, []);
 
   React.useEffect(() => {
     const interval = setInterval(() => {}, 1000);
